@@ -1,5 +1,7 @@
 # Node and React simple template (use Babel and webpack).
 
+Use server side rendering.
+
 Build:
 
 1. Install dependencies `npm install`

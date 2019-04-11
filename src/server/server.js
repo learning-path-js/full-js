@@ -16,7 +16,7 @@ server.get('/', (req, res) => {
         <title>Sample React App</title>
       </head>
       <body>
-        <div id="mountNode">${initialMarkup}</div>
+        <div id="container">${initialMarkup}</div>
         <script src="/main.js"></script>
       </body>
     </html>
