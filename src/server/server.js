@@ -20,7 +20,7 @@ server.get('/', (req, res) => {
         <script src="/main.js"></script>
       </body>
     </html>
-  `)
+  `);
 });
 
 server.listen(PORT, () => console.log('Server is listening at port: %s', PORT));
