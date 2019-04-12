@@ -10,8 +10,8 @@
     "bundle": "webpack -wd"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/learning-path-js/full-js.git"
+    "type": "git",
+    "url": "https://github.com/learning-path-js/full-js.git"
   },
   "keywords": [
     "react",
@@ -20,6 +20,7 @@
   "author": "stepanenkomaksi@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^3.2.3",
     "prop-types": "^15.7.2",

@@ -2,12 +2,23 @@ import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from '../components/App';
+import userApiRouter from '../api/user';
 
-const PORT = 9090;
+const PORT = process.env.PORT || 9090;
 const server = express();
+
+server.set('view engine', 'ejs');
 server.use(express.static('dist'));
+server.use('/api/user', userApiRouter);
 
 server.get('/', (req, res) => {
+    res.render('index', {
+        message: 'Hello from EJS object'
+    });
+});
+
+server.get('/component', (req, res) => {
+
     const initialMarkup = ReactDOMServer.renderToString(<App/>);
 
     res.send(`
