@@ -1,18 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
+import Header from './Header';
 
-export default function App () {
+class App extends React.Component {
 
-    const [count, setCount] = useState(0);
+    state = {clicksCount: 0}
 
-    return (
-        <div>
-            Simple React state full application.
-            <br /><br />
-            Here is a button that will track how many times you click it:
-            <br /><br />
-            <button onClick={() => setCount(count+1)}>
-                Clicked count: {count}
-            </button>
-        </div>
-    );
+    render() {
+        return (
+            <div className='App'>
+                <Header message='Header from react'/>
+                <div className='text-center'>
+                    <h3>counter: {this.state.clicksCount}</h3>
+                    <button onClick={() => {
+                        this.setState({clicksCount: this.state.clicksCount + 1});
+                    }}>Click
+                    </button>
+                </div>
+            </div>
+        );
+    }
 }
+
+export default App;
