@@ -3,7 +3,7 @@
 Use server side rendering.
 
 Reference link: https://jscomplete.com/learn/1rd-reactful
-Similar github repo: https://github.com/jscomplete/learn-fullstack-javascript/tags?after=v2.2
+Similar github repo: https://github.com/jscomplete/learn-fullstack-javascript
 
 Build:
 

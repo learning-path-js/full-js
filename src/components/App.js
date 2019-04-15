@@ -3,7 +3,11 @@ import Header from './Header';
 
 class App extends React.Component {
 
-    state = {clicksCount: 0}
+    state = {clicksCount: 0};
+
+    nextState() {
+        return {clicksCount: this.state.clicksCount + 1};
+    }
 
     render() {
         return (
@@ -12,7 +16,7 @@ class App extends React.Component {
                 <div className='text-center'>
                     <h3>counter: {this.state.clicksCount}</h3>
                     <button onClick={() => {
-                        this.setState({clicksCount: this.state.clicksCount + 1});
+                        this.setState(this.nextState());
                     }}>Click
                     </button>
                 </div>
