@@ -1,7 +1,7 @@
 import propTypes from 'prop-types';
 import React from 'react';
 
-const color = Math.random() <= 0.5 ? 'blue' : 'green';
+const color = 'blue';
 
 const Header = ({message}) => {
     return (
