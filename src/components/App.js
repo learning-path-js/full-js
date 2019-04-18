@@ -1,51 +1,22 @@
 import React from 'react';
 import Header from './Header';
 import ContestPreview from './ContestPreview';
-
-const data =
-    {
-        "contests": [
-            {
-                "id": 1,
-                "categoryName": "Business/Company",
-                "contestName": "Cognitive Building Bricks"
-            },
-            {
-                "id": 2,
-                "categoryName": "Magazine/Newsletter",
-                "contestName": "Educating people about sustainable food production"
-            },
-            {
-                "id": 3,
-                "categoryName": "Software Component",
-                "contestName": "Big Data Analytics for Cash Circulation"
-            },
-            {
-                "id": 4,
-                "categoryName": "Website",
-                "contestName": "Free programming books"
-            }
-        ]
-    };
+import axios from 'axios';
 
 class App extends React.Component {
+
+    API_CONTESTS_URL = '/api/contests';
 
     state = {
         contests: []
     };
 
     componentDidMount() {
-
-        console.log('Sending AJAX call');
-
-        setTimeout(() => {
-            this.setState({contests: data.contests});
-            console.log('AJAX completed');
-        }, 3000);
-    }
-
-    componentWillUnmount() {
-        //todo:
+        axios.get(this.API_CONTESTS_URL)
+            .then(resp => {
+                this.setState({contests: resp.data.contests});
+            })
+            .catch(console.error);
     }
 
     render() {
