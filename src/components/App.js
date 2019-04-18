@@ -1,25 +1,16 @@
 import React from 'react';
 import Header from './Header';
+import ContestPreview from './ContestPreview';
 
 class App extends React.Component {
-
-    state = {clicksCount: 0};
-
-    nextState() {
-        return {clicksCount: this.state.clicksCount + 1};
-    }
 
     render() {
         return (
             <div className='App'>
-                <Header message='Header from react'/>
-                <div className='text-center'>
-                    <h3>counter: {this.state.clicksCount}</h3>
-                    <button onClick={() => {
-                        this.setState(this.nextState());
-                    }}>Click
-                    </button>
-                </div>
+                <Header message='Naming Contests'/>
+                {this.props.contests.map(singleContest =>
+                    <ContestPreview key={singleContest.id} {...singleContest}/>
+                )}
             </div>
         );
     }
