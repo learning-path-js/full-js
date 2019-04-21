@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+
+  full-js:
+    image: mstepan/full-js:1.0.0
+    ports:
+      - "9090:9090"
+    environment:
+      - NODE_PORT=9090
+    mem_limit: 512m
+    mem_reservation: 256m

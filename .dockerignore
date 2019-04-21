@@ -1,0 +1,14 @@
+docker-compose.yml
+.idea
+.eslintrc.js
+build-docker.sh
+run-docker.sh
+docker-compose.yml
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+README.md
+LICENSE
