@@ -11,6 +11,7 @@ webpack.config.js
 node_modules
 npm-debug.log
 dist
+build
 Dockerfile
 README.md
 LICENSE

@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon --exec babel-node src/server/server.js --ignore dist/",
-    "bundle": "webpack -wd"
+    "bundle": "webpack -wd",
+    "build": "babel src -d build"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
