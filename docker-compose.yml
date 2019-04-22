@@ -6,7 +6,8 @@ services:
     ports:
       - "9090:9090"
     environment:
+      - NODE_ENV=production
       - NODE_PORT=9090
       - TZ=Europe/Kiev
     mem_limit: 512m
-    mem_reservation: 256m
+    memswap_limit: 1g

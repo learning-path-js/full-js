@@ -6,8 +6,7 @@
   "homepage": "https://github.com/learning-path-js/full-js#readme",
   "scripts": {
     "test": "jest",
-    "server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
-    "server:prod": "babel-node src/server/server.js --ignore dist/",
+    "start": "nodemon --exec babel-node src/server/server.js --ignore dist/",
     "bundle": "webpack -wd"
   },
   "repository": {
