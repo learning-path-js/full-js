@@ -10,8 +10,7 @@ docker-compose.yml
 webpack.config.js
 node_modules
 npm-debug.log
-dist
-build
+out
 Dockerfile
 README.md
 LICENSE

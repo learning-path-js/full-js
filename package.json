@@ -8,7 +8,7 @@
     "test": "jest",
     "start": "nodemon --exec babel-node src/server/server.js --ignore dist/",
     "bundle": "webpack -wd",
-    "build": "babel src -d build"
+    "build": "babel src -d out"
   },
   "repository": {
     "type": "git",
