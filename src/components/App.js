@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import ContestPreview from './ContestPreview';
+import MaterialButton from './MaterialButton';
 
 class App extends React.Component {
 
@@ -19,6 +20,7 @@ class App extends React.Component {
                 {this.state.contests.map(singleContest =>
                     <ContestPreview key={singleContest.id} {...singleContest}/>
                 )}
+                <MaterialButton/>
             </div>
         );
     }
