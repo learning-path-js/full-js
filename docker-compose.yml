@@ -11,6 +11,3 @@ services:
       - TZ=Europe/Kiev
     mem_limit: 512m
     memswap_limit: 1g
-
-
-
